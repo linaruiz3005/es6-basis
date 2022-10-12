@@ -24,16 +24,30 @@ console.log(`Nombre: ${estudiante.height}`.bgWhite)
 console.log(`Nombre: ${first_name}`.bgRed)*/
 
 const materias = require('./materias')
+
+//crear una nueva materia y ponerla en el arreglo de materia con el metoo push
+
+/*materias.push({
+    nombre: "Python",
+    instructor: "Jorge Celedon",
+    notas: [
+        3.4,
+        4.0
+    ],
+    tipo: "tecnica"
+})
+
 //recorrido del arreglo
 materias.forEach((materia)=>{
-    if(materia.instructor === 'Cristian Buitrago'){
-        console.log(`nombre:${materia.instructor}`.bgMagenta)
-        console.log(`nombre:${materia.notas}`.bgBlue)
-    }
+    console.log(`nombre:${materia.nombre}`.magenta)
+    console.log(`----------------`)
 })
+
+
+
 //map es un metodo de arreglos es6
 
-const profesores = materias.map((materia)=>{
+/*const profesores = materias.map((materia)=>{
     return materia.instructor
 })
 
@@ -45,4 +59,58 @@ const PHP = materias.filter((materia)=>{
     return materia.instructor === "Cristian Buitrago"
 })
 
-console.log(PHP)
+
+
+console.log(PHP)*/
+
+//eliminar materia con el metodo: splice
+
+//actualizar una materia 
+//encontrar el elemento que se quiere actualizar: findIndex
+let indice = materias.findIndex((materia)=> materia.instructor === "Cristian Buitrago")
+console.log(indice)
+
+materias[indice].instructor = "Jennifer Fajardo";
+
+console.log(materias)
+
+let notas = materias.findIndex((materia)=> materia.notas === 4)
+console.log(notas)
+
+materias[indice].notas = 5.0, 3.0;
+
+console.log(materias)
+
+
+
+console.log(materias)
+
+materias.splice(0,1)
+console.log(materias)
+
+
+
+
+
+
+
+
+/*let nota = materias.findIndex((materias)=> materias.notas === 5.0,6.0,3.4)
+console.log(nota)*/
+/*materias.push({
+    nombre: "Python",
+    instructor: "Jorge Celedon",
+    notas: [
+        3.4,
+        4.0
+    ],
+    tipo: "tecnica"
+})
+
+console.log(materias)*/
+
+
+
+
+
+
